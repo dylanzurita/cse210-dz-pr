@@ -1,8 +1,5 @@
 # cse210-student-template
 Dylan Zurita
-git add README.md
-git commit -m "changes in README.md file"
-git push
 
 This repository contains the starter code for many different projects. They are arranged as follows:
 
