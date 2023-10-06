@@ -2,7 +2,7 @@ using System;
 
 class Program
 {
-     static void Main(string[] args)
+    static void Main(string[] args)
     {
         Job job1 = new Job();
         job1._jobTitle = "Software Engineer";
@@ -16,12 +16,17 @@ class Program
         job2._startYear = 2022;
         job2._endYear = 2023;
 
+        // job1.Display();
+        // job2.Display();
+
         Resume myResume = new Resume();
-        myResume._name = "Allison Rose";
+        myResume._name = "Dylan Zurita";
 
         myResume._jobs.Add(job1);
         myResume._jobs.Add(job2);
 
-        myResume.Display();
+        myResume.Display(); 
+
+
     }
 }
