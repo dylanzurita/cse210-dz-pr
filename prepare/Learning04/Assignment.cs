@@ -1,26 +1,73 @@
-public class Assignment
+public class Assignment 
 {
-    private string _studentName;
-    private string _topic;
+    private string _studentName = "";
+    private string _topic = "";
 
-    public Assignment(string studentName, string topic)
+    public string GetStudentName ()
+    {
+        return _studentName;
+    }
+
+    public string GetTopic ()
+    {
+        return _topic;
+    }
+    
+    public Assignment (string studentName, string topic)
     {
         _studentName = studentName;
         _topic = topic;
     }
 
-    public string GetStudentName()
+    public string GetSummary () 
     {
-        return _studentName;
-    }
-
-    public string GetTopic()
-    {
-        return _topic;
-    }
-
-    public string GetSummary()
-    {
-        return _studentName + " - " + _topic;
+        return $"{_studentName} - {_topic}";
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// public class Assignment
+// {
+//     private string _studentName;
+//     private string _topic;
+
+//     public Assignment(string studentName, string topic)
+//     {
+//         _studentName = studentName;
+//         _topic = topic;
+//     }
+
+//     public string GetStudentName()
+//     {
+//         return _studentName;
+//     }
+
+//     public string GetTopic()
+//     {
+//         return _topic;
+//     }
+
+//     public string GetSummary()
+//     {
+//         return _studentName + " - " + _topic;
+//     }
+// }
