@@ -10,12 +10,20 @@ public class BreathingActivity : Activity
         Console.WriteLine("Get Ready");
         AnimationsStrings();
 
-        for (int i = 0; i < _activityDurationInput; i++)
+        while (_activityDurationInput > 0)
         {
-            Console.WriteLine(i % 2 == 0 ? "Breathe in..." : "Breathe out...");
-            Countdown();
+            Console.WriteLine("Breathe in... up to five");
+            Thread.Sleep(5000);
+
+            Console.WriteLine ("Breathe out... down to one");
+            Thread.Sleep(5000);
+
+            _activityDurationInput -= 5;
+
         }
         EndingMessage ();
     }
 
 }
+
+

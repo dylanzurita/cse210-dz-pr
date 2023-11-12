@@ -32,17 +32,23 @@ public class ReflectionActivity : Activity
         AnimationsStrings();
 
         Random random = new Random();
-        for (int i = _activityDurationInput; i > 0; i--)
-        {
-            string prompt = prompts[random.Next(prompts.Count)];
-            Console.WriteLine(prompt);
-            AnimationsStrings(); // Animate a spinner for 5 seconds
 
-            foreach (var question in questions)
-            {
-                Console.WriteLine(question);
-                AnimationsStrings(); // Animate a spinner for 5 seconds
-            }
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(_activityDurationInput);
+
+        
+        string prompt = prompts[random.Next(prompts.Count)];
+        Console.WriteLine(prompt);
+        Console.WriteLine("When you are ready to follor press enter...");
+        Console.WriteLine();
+        AnimationsStrings(); 
+
+
+        while (DateTime.Now < endTime)
+        {
+            string quest = questions[random.Next(questions.Count)];
+            Console.WriteLine(quest);
+            AnimationsStrings(); 
         }
         EndingMessage();
     }

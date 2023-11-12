@@ -2,7 +2,7 @@ public class Activity
 {
     private string _activityName = " ";
     private string _activityDescription = " ";
-    protected int _activityDurationInput = 0;
+    protected int _activityDurationInput;
 
     public Activity (string activityName, string activityDescription)
     {
@@ -67,6 +67,6 @@ public class Activity
     {
         Console.WriteLine ("Well Done!!");
         AnimationsStrings();
-        Console.WriteLine($"You have completed another {_activityDurationInput} of the {_activityName}.");
+        Console.WriteLine($"You have completed another {_activityDurationInput} seconds of the {_activityName}.");
     }
 }

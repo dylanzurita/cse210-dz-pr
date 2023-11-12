@@ -8,7 +8,8 @@ public class ListingActivity : Activity
         "When have you felt the Holy Ghost this month?",
         "Who are some of your personal heroes?"
     };
-
+    private List<string> answers = new List<string>
+    {};
     public ListingActivity() : base("Listing Activity", "List positive aspects of your life") { }
 
     public void PerformListing()
@@ -23,21 +24,29 @@ public class ListingActivity : Activity
         string prompt = prompts[random.Next(prompts.Count)];
         Console.WriteLine(prompt);
         AnimationsStrings(); 
-        
-            Console.WriteLine("Start listing items...");   
-                Console.ReadLine();
 
-        Console.WriteLine($"Number of items listed: ");
+        Console.WriteLine("Start listing items..."); 
+        
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(_activityDurationInput);
+
+        while (DateTime.Now < endTime)
+        {
+            string listedItem = Console.ReadLine();
+            answers.Add(listedItem);
+        }
+  
 
         EndingMessage();
     }
-
-    private void AnimateCountdown(int seconds)
-    {
-        for (int i = seconds; i > 0; i--)
-        {
-            Console.WriteLine($"Countdown: {i}");
-            System.Threading.Thread.Sleep(1000); 
-        }
-    }
 }
+
+//     private void AnimateCountdown(int seconds)
+//     {
+//         for (int i = seconds; i > 0; i--)
+//         {
+//             Console.WriteLine($"Countdown: {i}");
+//             System.Threading.Thread.Sleep(1000); 
+//         }
+//     }
+// }
