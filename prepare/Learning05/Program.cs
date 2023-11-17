@@ -21,7 +21,7 @@ class Program
             string color = sha.GetColor();
             double Area = sha.GetArea();
 
-            Console.WriteLine ($"The shap with color {color}, has an area od {Area}");
+            Console.WriteLine ($"The shape with color {color}, has an area od {Area}");
         }
 
 
